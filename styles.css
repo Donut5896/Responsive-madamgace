@@ -1054,12 +1054,13 @@ header.sticky ul li a{
     .about .contentBx,
     .about .imgBx{
         min-width: 100%;
-        width: 100%;
+        max-width: 400px;
+        width: 300px;
         text-align: center;
         padding-right: 0px;
     }
     .about .imgBx{
-        min-height: 250px;
+        min-height: 300px;
         align-items: center;
         margin-left: 2rem;
     }
