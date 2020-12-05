@@ -260,7 +260,7 @@ nav{
     place-items: center;
     text-align: center;
     /*-----------*/
-   background: url('./Images/hero.jpg');
+   background: url("Images/hero.jpg") center no-repeat;
    background-size: cover;
     position: relative;
     width: 100%;
