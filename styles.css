@@ -60,11 +60,13 @@ html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
 }
-body{
+html, body{
     font-family: 'Poppins', sans-serif; 
-    background:var(--clr-white);
-    
+   
+    min-width: 100%;
+    min-height:  200vh;
     font-size: 0.875rem;
     line-height: 0.875rem;
 }
@@ -258,7 +260,7 @@ nav{
     place-items: center;
     text-align: center;
     /*-----------*/
-   background: url("./Images/hero.jpg") center no-repeat;
+   background: url('./images/hero.jpg');
    background-size: cover;
     position: relative;
     width: 100%;
@@ -313,8 +315,6 @@ nav{
     text-transform: uppercase;
     font-size: 10.3rem;
 }
-
-
 
 .seperator{
     display: flex;
@@ -465,7 +465,7 @@ header.sticky ul li a{
   }
 .about .imgBx .review {
     background: var(--clr-white);
-    padding: 1.5rem 2rem;
+    padding: 1.5rem ;
     border-radius: var(--radius);
     box-shadow: var(--light-shadow);
     transition: var(--transition);
@@ -688,7 +688,7 @@ header.sticky ul li a{
 }
 
 .container {
-    max-width: 100%;
+    max-width: 70%;
     margin: 5rem auto;
     padding: 0 auto;
 
@@ -716,7 +716,7 @@ header.sticky ul li a{
 
 .container{
     text-align: center;
-
+    padding-bottom: 4rem
 }
 .container .shop-items{
     position: relative;
@@ -955,10 +955,7 @@ header.sticky ul li a{
         section .container{
         padding: none;
         }
-        .banner3{
-            background-color: var(--clr-grey-10);
-            width: min-content;
-        }
+      
     }  
 
 
