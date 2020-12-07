@@ -331,7 +331,7 @@ footer span{
     body{
         min-width: 64vh;
     }
-
+}
 @media screen and (max-width: 320px) {
     body{
       
