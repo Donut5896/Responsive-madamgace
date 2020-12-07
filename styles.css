@@ -15,6 +15,7 @@ html{
 html, body{
     font-family: 'Poppins', sans-serif; 
     min-width: 30vh;
+    max-width: 100%;
     font-size: 0.875rem;
     line-height: 0.875rem;
 }
@@ -28,6 +29,10 @@ a, ul {
     cursor: pointer;
     text-decoration: none;
 }
+
+
+
+
 
 :root {
     /* dark shades of primary color*/
@@ -140,14 +145,14 @@ footer{
     margin-right: 30px;
 }
 .footer .container-nav .sec.aboutus{
-    width: 70%;
+    width: 30%;
 }
 
 h2 {
     display: flex;
     font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
+    margin-block-start: 10px;
+    margin-block-end: 15px;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
@@ -157,19 +162,30 @@ h2 {
     position: relative;
     color: #fff;
     font-weight: 500;
-    margin-bottom: 15px;
 }
 .footer .container-nav h2:before{
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: -15px;
     left: 0;
     width: 50px;
     height: 2px;
     background: #f00;
 }
+p {
+    display: block;
+    margin-block-start: 30px;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
 footer p{
     color: #999;
+}
+footer span{
+    color:  #999;
+    margin: 10px 0;
 }
 /* social icons */
 .sci {
@@ -206,7 +222,7 @@ footer p{
 .quickLinks ul li a{
     color: #999;
     text-decoration: none;
-    margin-bottom: 10px;
+    margin: 10px 0;
     display: inline-block;
 }
 .quickLinks ul li a:hover{
@@ -243,7 +259,11 @@ footer p{
     text-align: center;
     color: #999;
 }
+
+/* mobile screen */
 @media (max-width: 991px){
+ 
+
     footer{
         padding: 40px;
     }
@@ -265,23 +285,31 @@ footer p{
     footer span{
         color: #999;
     }
+    .footer .container-nav .sec.aboutus{
+        width: 100%;
+    }
   
 }
+
+
 /* section */
 .section{
     position: relative;
-    padding: 100px;
+    
 }
 .section-center{
     width: 90vw;
     margin: 0 auto;
     max-width: 100%;
 }
-@media screen and (max-width: 767px) {
+
+/* mobile screen */
+
+@media screen and (max-width: 768px) {
     .section-center{
         width: 95vw;
     }
-
+  
 }
 
 @media screen and (max-width: 375px) {
@@ -394,8 +422,13 @@ nav{
     color: #fff;
 }
 
+
+/* desktop screen */
+
 @media screen and (min-width: 800px) {
-   
+    .section{
+        padding: 100px;
+     }
     nav {
       background: #fff;
 
@@ -586,7 +619,7 @@ header.sticky ul li a{
 
 
 
-
+/* desktop screen */
 
 @media screen and (min-width: 768px){
     .welcome-text {
@@ -625,7 +658,7 @@ header.sticky ul li a{
 .titleText{
     font-weight: 600;
     color: #222;
-    font-size: 2em;
+    font-size: 32px;
     margin-bottom: 10px;
     line-height: 2rem;
     text-align: center;
@@ -633,18 +666,19 @@ header.sticky ul li a{
 }
 .text{
     color: #222;
-    font-size: 1em;
+    font-size: 16px;
     line-height: 1.25rem; 
     margin-bottom: 10px;
     flex-wrap: wrap;
-  
+    width: 100%;
+    text-align: left;
 }
 
 .about .imgBx{
     position: relative;
     min-width: 100%;
     max-width: 100%;
-    width: 50%;
+    
     max-width: var(--fixed-width);
     justify-content: center;
     
@@ -721,13 +755,14 @@ header.sticky ul li a{
   .prev-btn,
   .next-btn {
     color: var(--clr-primary-7);
-    font-size: 1.25rem;
+    font-size: 4rem;
     background: transparent;
     border-color: transparent;
     margin: 0 0.5rem;
     transition: var(--transition);
     cursor: pointer;
-  }
+    }
+
   .prev-btn:hover,
   .next-btn:hover {
     color: var(--clr-primary-5);
@@ -755,6 +790,7 @@ header.sticky ul li a{
 .destination{
     text-align: center;
     color: #222;
+    padding-bottom: 50px;
 }
 .destination .content {
     text-align: center;
@@ -840,7 +876,7 @@ header.sticky ul li a{
 }
 
 .container {
-    max-width: 70%;
+    max-width: 50%;
     margin: 5rem auto;
     padding: 0 auto;
 
@@ -880,7 +916,7 @@ header.sticky ul li a{
 
 .container .shop-items .shop-item {
     position: relative;
-    margin: 10px 5px;
+    margin: 10px 10px;
     height: 420px;
     width: 350px;
     min-width: initial;
@@ -1089,8 +1125,10 @@ header.sticky ul li a{
    
 /* mobile screen */
 
-@media (max-width: 767px){
-    
+@media (max-width: 770px){
+        .titleText{
+            padding: 0 3rem;
+        }
         .cart-row .cart-item-title {
             display: none;
             width: 100%;
@@ -1111,6 +1149,10 @@ header.sticky ul li a{
         padding: none;
         }
         
+        .container {
+            max-width: 100%;
+        
+        }
       
     }  
 
@@ -1155,12 +1197,12 @@ header.sticky ul li a{
       justify-content: center;
       align-items: center;
       height: auto;
-      padding-left: 35px;
+   
   }
   .contentad {
     text-align: center;
     flex: 25%;
-    max-width: 70%;
+    max-width: 100%;
     padding: 0 .5rem;
   }
   .contentad img{
@@ -1171,18 +1213,19 @@ header.sticky ul li a{
     
   }
 
+  /* desktop screen */
 
-@media (min-width: 767px){
+@media (min-width: 1025px){
     .ads{
         max-width: 100%;
         position: relative;
         display: flex;
-        width: 80%;
+        width: 100%;
         justify-content: center;
         align-items: center;
         height: auto;
         flex-wrap: wrap;
-        margin-left: 5rem;
+        padding: 5px 260px;
     }
     .contentad {
       text-align: center;
@@ -1206,10 +1249,9 @@ header.sticky ul li a{
         padding-left: 10rem;
     }
     .about .contentBx{
-        width: 80%;
-        text-align: center;
+       width:100%;
+       text-align: center;
        justify-content: center;
-       margin-left: 55px;
        padding-bottom: 3rem;
       
     }
@@ -1217,8 +1259,13 @@ header.sticky ul li a{
     .about .imgBx{
         position: relative;
         width: 50%;
-        
-        
+    }
+    .about .text{
+        padding: 5px 400px;
+    }
+    #info{
+        padding: 10px 300px;
+    }
 }
 
 
@@ -1230,9 +1277,9 @@ header.sticky ul li a{
 
 
 
+/* mobile screen */
 
-
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
    
     .banner .container h2{
         padding: 2rem;
@@ -1242,6 +1289,8 @@ header.sticky ul li a{
     /* about section */
     .about{
         flex-direction: column;
+        max-width: 100%;
+        padding: 2rem 2rem;
     }
     .about .contentBx,
     .about .imgBx{
@@ -1254,7 +1303,6 @@ header.sticky ul li a{
     .about .imgBx{
         min-height: 300px;
         align-items: center;
-        margin-left: 2rem;
     }
     .btn{
         margin-bottom: 30px;
