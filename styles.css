@@ -319,12 +319,19 @@ footer span{
         min-width: 50.5vh;
     }
 }
+
 @media screen and (max-width: 375px) and (max-height: 667px){
     body{
       
         min-width: 61vh;
     }
 }
+
+@media screen and (max-width: 360px) and (max-height: 640px){
+    body{
+        min-width: 64vh;
+    }
+
 @media screen and (max-width: 320px) {
     body{
       
