@@ -206,6 +206,7 @@ footer span{
     margin-right: 10px;
     text-decoration: none;
     border-radius: 4px;
+    color: #fff;
 }
 .sci li a:hover{
     background: #f00;
@@ -213,6 +214,7 @@ footer span{
 .sci li a .fa{
     color: #fff;
     font-size: 20px;
+ 
 }
 /* quick links */
 .quickLinks{
