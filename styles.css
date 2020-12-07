@@ -14,8 +14,7 @@ html{
 }
 html, body{
     font-family: 'Poppins', sans-serif; 
-    min-width: 30vh;
-    max-width: 100%;
+    
     font-size: 0.875rem;
     line-height: 0.875rem;
 }
@@ -308,22 +307,28 @@ footer span{
 /* mobile screen */
 
 @media screen and (max-width: 768px) {
-    .section-center{
+    .body{
         width: 95vw;
     }
   
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 375px) and (max-height: 812px) {
     body{
       
-        min-width: 30vh;
+        min-width: 50.5vh;
+    }
+}
+@media screen and (max-width: 375px) and (max-height: 667px){
+    body{
+      
+        min-width: 61vh;
     }
 }
 @media screen and (max-width: 320px) {
     body{
       
-        min-width: 65vh;
+        min-width: 72vh;
     }
     .cart-row {
    
@@ -523,13 +528,14 @@ nav{
     z-index: 1;
 }
 .welcome-text .sub-headline{
-    font-size: 6rem;
+    font-size: 8rem;
     font-family: var(--secondary-font);
     color: var(--secondary-font-color);
     font-weight: 100;
     line-height:  .4;
     letter-spacing: 2px;
     margin-bottom: -.5rem;
+    padding: 3rem 3rem;
 }
 
 .welcome-text .sub-headline .first-letter{
@@ -655,7 +661,7 @@ header.sticky ul li a{
     max-width: 100%;
     width: 100%;
     text-align: center;
-    padding-right: 40px;
+    padding: 40px 40px;
 }
 .titleText{
     font-weight: 600;
@@ -674,6 +680,7 @@ header.sticky ul li a{
     flex-wrap: wrap;
     width: 100%;
     text-align: left;
+   
 }
 
 .about .imgBx{
@@ -752,6 +759,7 @@ header.sticky ul li a{
   #info {
     margin-bottom: 0.75rem;
     flex-wrap: wrap;
+    padding: 0 100px;
 }
   
   .prev-btn,
@@ -1129,7 +1137,7 @@ header.sticky ul li a{
 
 @media (max-width: 770px){
         .titleText{
-            padding: 0 3rem;
+            padding: 0 4rem;
         }
         .cart-row .cart-item-title {
             display: none;
@@ -1141,7 +1149,8 @@ header.sticky ul li a{
             
         }
         .cart-row{
-            width: 50%;
+            width: 100%;
+            padding: 0 2rem
         }
         .btn-danger {
             margin-top: 2rem;
@@ -1227,7 +1236,7 @@ header.sticky ul li a{
         align-items: center;
         height: auto;
         flex-wrap: wrap;
-        padding: 5px 260px;
+        padding: 5px 200px;
     }
     .contentad {
       text-align: center;
@@ -1263,11 +1272,20 @@ header.sticky ul li a{
         width: 50%;
     }
     .about .text{
-        padding: 5px 400px;
+        padding: 5px 200px;
     }
+
     #info{
         padding: 10px 300px;
     }
+
+    .container .shop-items{
+        width: 100%;
+     }
+     .container {
+        max-width: 100%;
+        margin: 5rem auto;
+        padding: 0 250px;
 }
 
 
