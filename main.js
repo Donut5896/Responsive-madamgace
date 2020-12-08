@@ -112,8 +112,8 @@ const navbar = document.getElementById('nav');
            left: 0,
            top: position,
         });
-        //to close navbar whwn naviagte to the spot
-        linksContaner.getElementsByClassName.height = 0;
+        //to close navbar when naviagte to the spot
+        linksContainer.getElementsByClassName.height = 0;
       });
   });
 
