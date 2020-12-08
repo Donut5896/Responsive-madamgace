@@ -363,9 +363,6 @@ footer span{
 }
 
 
-
-
-
 main{
     min-height: 100vh;
     display: grid;
@@ -373,86 +370,8 @@ main{
 }
 
 
-/*nav bar 
-
-header{
-    background: #fff;
-    padding: 1rem 1.5rem;
-    z-index: 1000;
-}
-.fixed-nav{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    box-shadow:  0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: 0.6s;
-}
-.fixed-nav .links a{
-    color:hsl(209, 61%, 16%);
-}
-.fixed-nav .links a:hover{
-    color: hsla(182, 63%, 54%);
-}
-.nav-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.nav-toggle{
-    font-size: 1.5rem;
-    color: rgb(206, 209, 24);
-    background: transparent;
-    border-color: transparent;
-    transition:  all 0.3s linear;
-    cursor: pointer;
-}
-.nav-toggle:hover {
-    color: hsla(182, 63%, 54%);
-}
 
 
-.nav-header .logo{
-    position: relative;
-    height: 50px;
-    font-weight: 800;
-    font-size: 30px;
-    font-family: var(--secondary-font);
-    color: var(--secondary-font-color);
-    cursor: pointer;
-    transition: 0.6s;
-    padding-top: 20px;
-}
-.links-container{
-    height: 0;
-    overflow: hidden;
-    transition: all 0.3s linear;
-}
-
-.show-links{
-    height: 200px;
-}
-
-
-
-.links a{
-    position: relative;
-    color:  hsl(209, 61%, 16%);
-    font-size: 1.1rem;
-    text-transform: capitalize;
-    letter-spacing: 0.25rem;
-    display: block;
-    transition: all 0.3s linear;
-    margin: 0 1rem;
-    font-weight: bold;
-    padding: 0.75rem 0;
-    transition: 0.6s;
-}
-.links a:hover{
-    color: #fff;
-}
-*/
 
 /* desktop screen */
 @media screen and (min-width: 800px) {
@@ -579,53 +498,6 @@ header .links a:hover{
     color: rgb(223, 187, 30);
 } 
 
-/*@media screen and (min-width: 700px) {
-   
-    nav {
-      background: transparent;
-    }
-    .nav-center {
-      width: 85vw;
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .nav-header {
-      padding-top: 30px;
-    }
-    .nav-toggle {
-      display: none;
-    }
-    .links-container {
-      height: auto !important;
-     
-    }
-    .links {
-      display: flex;
-    }
-    .links li a{
-        background: transparent;
-        color: rgb(168, 139, 10);
-    }
-    .links a {
-      background: transparent;
-      font-size: 1.1rem;
-      text-transform: capitalize;
-      letter-spacing: 0.25rem;
-      display: block;
-      transition: all 0.3s linear;
-      margin: 0 1rem;
-      font-weight: bold;
-      padding: 0;
-    }
-   
-    .links a:hover {
-      color: rgb(168, 139, 10);
-    }
-  }
-*/
 
 
 /* banner section */
