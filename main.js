@@ -50,8 +50,6 @@ const reviews = [
   
   
   // select item
-
-
   const imgfile = document.getElementById("person-img");
   const author = document.getElementById("author");
   const job = document.getElementById("job");
@@ -61,62 +59,25 @@ const reviews = [
   const randomBtn = document.querySelector('.random-btn');
   const nextBtn = document.querySelector('.next-btn');
 
-// close links
+/* close links*/
 const navToggle = document.querySelector(".nav-toggle");
 const linksContainer = document.querySelector(".links-container");
-const links = document.querySelector(".links");
+const links = document.querySelector(".links"); 
 
+// side bar
+const toggleBtn = document.querySelector(".sidebar-toggle");
+const closeBtn = document.querySelector(".close-btn");
+const sidebar = document.querySelector(".sidebar");
 
+//sidebar funtion
+toggleBtn.addEventListener("click", function() {
 
-//**************add new links dinamically **********
-navToggle.addEventListener("click", function () {
-  // linksContainer.classList.toggle("show-links");
-
-  const linksHeight = links.getBoundingClientRect().height;
-  const containerHeight = linksContainer.getBoundingClientRect().height;
-  if (containerHeight === 0) {
-    linksContainer.style.height = `${linksHeight}px`;
-  } else {
-    linksContainer.style.height = 0;
-  }
-  
+  sidebar.classList.toggle("show-sidebar");
 });
 
-const navbar = document.getElementById('nav');
-//smooth scrolling function
-  const scrollLinks = document.querySelectorAll('.scroll-link');
-  scrollLinks.forEach(function(link) {
-      link.addEventListener('click', function(event) {
-        event.preventDefault();
-
-        //naviagte to specific spot
-        const id = event.currentTarget.getAttribute("href").slice(1);
-        const element = document.getElementById(id);
-
-        //calculate the height
-        const navHeight = navbar.getBoundingClientRect().height;
-        const containerHeight = linksContainer.getBoundingClientRect().height;
-        const fixedNav = navbar.classList.contains("fixed-nav");
-        let position = element.offsetTop - navHeight;
-
-        if(!fixedNav){
-          position = position - navHeight;
-        }
-        //calculate position for small screen
-        if(navHeight > 82){
-          position = position +  containerHeight ;
-        }
-
-
-        window.scrollTo({
-           left: 0,
-           top: position,
-        });
-        //to close navbar when naviagte to the spot
-        linksContainer.getElementsByClassName.height = 0;
-      });
-  });
-
+closeBtn.addEventListener("click", function() {
+  sidebar.classList.remove("show-sidebar")
+});
 
 
   //fixed nav
@@ -124,6 +85,9 @@ const navbar = document.getElementById('nav');
     let header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
 });
+
+
+//-------------------Review-----------------------//
  
   // set starting item
   let currentItem = 0;
@@ -282,14 +246,3 @@ function updateCartTotal() {
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = '฿' + total
 }
-
-
-
-
-
-
-
-
-
-
-
