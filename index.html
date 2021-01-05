@@ -15,10 +15,21 @@
 <body>
    
     <header>
-            <!--nav header-->
-             <button class="sidebar-toggle">
+            
+                 <!--cart button-->
+                 <div class="navbar-center">
+                    <div class="cart-btn">
+                        <span class="nav-icon">
+                            <i class="fa fa-cart-plus"></i>
+                        </span>
+                        <div class="cart-items">0</div>
+                    </div>
+                </div>
+                <!--sidebar-->
+                <button class="sidebar-toggle">
                     <i class="fas fa-bars"></i>
                 </button>
+                
                 <aside class="sidebar">
                     
                     <div class="sidebar-header">
@@ -27,6 +38,7 @@
                             <i class="fas fa-times"></i>
                         </button>
                     </div>  
+                   
                        <!--links--> 
                    
                         <ul class="links">
@@ -138,70 +150,63 @@
      <!--banner3--><!--store-->
     
 
-     <section class="banner3"  id="store">
-        <section class="container content-section">
-            <h2 class="section-header">Buy now</h2>
-
+        <section class="store"  id="store">
+            <div class="section-header">
+                 <h2>Our Product</h2>
+            </div>
+               
             <div class="shop-items">
-                <div class="shop-item">
-                    <img class="shop-item-image fitBg" src="products/1.jpg">
-                     <span class="shop-item-title">สบู่ล้างหน้าสูตรสมุนไพร(คละ)</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">฿129.00</span>
-                        <button class=" btn-primary shop-item-button" type="button">ADD TO CART</button>
+                  <!--single product-->
+               <!-- <div class="shop-item">
+                    <div class="img-container">
+                    <img class="shop-item-image" src="products/1.jpg">
+                     <button class="bag-btn" data-id="1">
+                         <i class="fa fa-shopping-cart">
+                             add to cart
+                         </i>
+                     </button>
+                    </div>
+                        <h3>สบู่ล้างหน้าสูตรสมุนไพร(คละ)</h3> 
+                        <h4>฿129.00</h4>
+                </div>  -->
+                 <!--end of single product--> 
+            </div>        
+        </section>        
+                
+
+        <!--cart  -->
+        <div class="cart-overlay">
+            <div class="cart">
+                <span class="close-cart">
+                    <i class="fa fa-window-close"></i>
+                </span>
+                <h2>your cart</h2>
+                <div class="cart-content">
+                <!--cart item-->
+                    <div class="cart-item">
+                        <img src="./products/1.jpg" alt="product1">
+                        <div>
+                            <h4>สบู่ล้างหน้าสูตรสมุนไพร(คละ)</h4>
+                            <h5>$129.00</h5>
+                            <span class="remove-item">remove</span>
+                        </div>
+                        <div>
+                            <i class="fa fa-chevron-up"></i>
+                            <p class="item-amount"></p>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="shop-item">
-                 
-                    <img class="shop-item-image fitBg" src="products/2.jpg">
-                       <span class="shop-item-title">Mega Whitening Mask</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">฿559.00</span>
-                        <button class=" btn-primary shop-item-button"type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    
-                    <img class="shop-item-image fitBg" src="products/3.jpg">
-                    <span class="shop-item-title">Mega Whitening Lotion</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">฿399.00</span>
-                        <button class=" btn-primary shop-item-button" type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    
-                    <img class="shop-item-image fitBg" src="products/4.jpg">
-                    <span class="shop-item-title">Whitening Abutin Serum</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">฿559.00</span>
-                        <button class=" btn-primary shop-item-button" type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    
-                    <img class="shop-item-image fitBg" src="products/5.jpg">
-                    <span class="shop-item-title">สบู่ล้างหน้าสูตรกาแฟ</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">฿129.00</span>
-                        <button class=" btn-primary shop-item-button" type="button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="shop-item">
-                    
-                    <img class="shop-item-image fitBg" src="products/6.jpg">
-                    <span class="shop-item-title">สบู่ล้างหน้าสูตรน้ำผึ้งมะนาว</span>
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">฿129.00</span>
-                        <button class=" btn-primary shop-item-button" type="button">ADD TO CART</button>
-                    </div>
+                <!--end of cart item-->
+
+                <div class="cart-footer">
+                    <h3>your total : $ <span class="cart-total">0</span></h3>
+                    <button class="clear-cart banner-btn">clear cart</button>
                 </div>
             </div>
-        </section>
+        </div>    
 
-        <!--cart checkout -->
-        <section class="container content-section">
-            <div class="head">
+            <!--<div class="head">
                 <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
                 <h2 class="sec-head">CART</h2>
             </div>
@@ -217,9 +222,8 @@
                 <strong class="cart-total-title">Total</strong>
                 <span class="cart-total-price">฿0</span>
             </div>
-            <button class=" btn-primary btn-purchase" type="button">PURCHASE</button>
-        </section> 
-    </section>
+            <button class=" btn-primary btn-purchase" type="button">PURCHASE</button> -->
+    
    
 
 

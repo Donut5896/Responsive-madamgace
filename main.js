@@ -69,6 +69,91 @@ const toggleBtn = document.querySelector(".sidebar-toggle");
 const closeBtn = document.querySelector(".close-btn");
 const sidebar = document.querySelector(".sidebar");
 
+//--------- shopping cart----------//
+const cartBtn = document.querySelector('.cart-btn');
+const closeCartBtn = document.querySelector('.close-cart');
+const clearCartBtn = document.querySelector('.clear-cart');
+const cartDOM = document.querySelector('.cart');
+const cartOverlay = document.querySelector('.cart-overlay');
+const cartItems = document.querySelector('.cart-items');
+const cartTotal = document.querySelector('.cart-total');
+const cartContent = document.querySelector('.cart-content');
+const productsDOM = document.querySelector('.shop-items');
+
+let cart;
+let buttonDOM = [];
+
+//getting the products
+class Products{
+  async getProducts(){
+    try{
+      let result = await fetch('product.json');
+      let data = await result.json();
+
+      let products = data.items;
+      products = products.map(item => {
+        const {title,price} = item.fields;
+        const {id} = item.sys;
+        const image = item.fields.image.fields.file.url;
+        return {title, price, id, image}
+      })
+      return products
+    }catch(error){
+      console.log(error);
+    }
+  }
+}
+
+//display the products
+
+class UI{
+  displayProducts(products){
+    let result = '';
+    products.forEach(product => {
+      result += `
+                <div class="shop-item">
+                    <div class="img-container">
+                    <img class="shop-item-image" 
+                    src="${product.image}">
+                     <button class="bag-btn" data-id="${product.id}">
+                         <i class="fa fa-shopping-cart">
+                             add to cart
+                         </i>
+                     </button>
+                    </div>
+                        <h3>${product.title}</h3> 
+                        <h4>฿${product.price}</h4>
+                </div>  `;
+    });
+    productsDOM.innerHTML = result;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const ui = new UI()
+    const products = new Products();
+
+    products.getProducts().then(products => {
+      ui.displayProducts(products);
+     
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+//--------- shopping cart end----------//
+
+
+
+
 //sidebar funtion
 toggleBtn.addEventListener("click", function() {
 
@@ -140,6 +225,18 @@ closeBtn.addEventListener("click", function() {
   
   /*----------------------store---------------------------*/
 
+
+
+
+
+
+
+
+
+
+
+
+ /*
   if(document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
@@ -246,3 +343,4 @@ function updateCartTotal() {
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = '฿' + total
 }
+*/
