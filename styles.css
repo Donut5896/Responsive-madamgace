@@ -366,7 +366,7 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1;
   transition: 0.6s;
 }
 
@@ -528,7 +528,6 @@ header {
   position: relative;
   display: grid;
   place-items: center;
-  text-align: center;
   background: url("./Images/hero.jpg");
   background-size: cover;
   width: 100%;
@@ -541,14 +540,12 @@ header {
   left: 0;
   width: 100%;
   height: 400px;
-  z-index: 1;
   background: linear-gradient(to top, #111, transparent);
 }
 .banner .container {
   position: relative;
   max-width: 900px;
   text-align: center;
-  z-index: 1;
 }
 .welcome-text h1 {
   color: #fff;
@@ -566,7 +563,6 @@ header {
   max-width: 122.5rem;
   margin: 0 auto;
   padding: 2rem 2.4rem;
-  z-index: 1;
 }
 .welcome-text .sub-headline {
   font-size: 8rem;
@@ -897,14 +893,14 @@ header {
   margin-top: 200px;
   letter-spacing: 0.5rem;
 }
-.container {
+/*.container {
   max-width: 50%;
   margin: 5rem auto;
   padding: 0 auto;
   text-align: center;
   padding-bottom: 4rem;
   border: 2px solid #222;
-}
+}*/
 
 .shop-items {
   width: 90vw;
@@ -915,17 +911,6 @@ header {
   grid-column-gap: 1.5rem;
   grid-row-gap: 2rem;
 }
-
-/*.shop-item {
-  position: relative;
-  margin: 10px 10px;
-  height: 420px;
-  width: 350px;
-  min-width: initial;
-  max-width: 350px;
-  box-shadow: 2px 2px 2px 2px #222;
-  background: #191919 !important;
-}*/
 
 .img-container {
   position: relative;
@@ -997,7 +982,7 @@ header {
   width: 100%;
   height: 100%;
   transition: var(--mainTransition);
-  background: #fff;
+  background: rgba(221, 246, 250, 0.5);
   z-index: 2;
   visibility: hidden;
 }
@@ -1034,12 +1019,17 @@ header {
 .close-cart {
   font-size: 1.7rem;
   cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  color: var(--clr-red-dark);
 }
 .cart h2 {
   text-transform: capitalize;
   text-align: center;
   letter-spacing: var(--mainSpacing);
   margin-bottom: 2rem;
+  justify-content: center;
 }
 /*---------- Cart Item -------------------- */
 .cart-item {
@@ -1071,7 +1061,7 @@ header {
 }
 .fa-chevron-up,
 .fa-chevron-down {
-  color: var(--primaryColor);
+  color: var(--clr-primary-5);
   cursor: pointer;
 }
 /*---------- End of Cart Item -------------------- */
@@ -1084,6 +1074,17 @@ header {
 .cart-footer h3 {
   text-transform: capitalize;
   margin-bottom: 1rem;
+}
+.banner-btn {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  background: var(--clr-primary-5);
+  color: var(--mainBlack);
+  border: 1px solid var(--clr-primary-6);
+  transition: var(--mainTransition);
+  cursor: pointer;
 }
 
 /* banner 2*/
