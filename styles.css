@@ -893,14 +893,7 @@ header {
   margin-top: 200px;
   letter-spacing: 0.5rem;
 }
-/*.container {
-  max-width: 50%;
-  margin: 5rem auto;
-  padding: 0 auto;
-  text-align: center;
-  padding-bottom: 4rem;
-  border: 2px solid #222;
-}*/
+
 
 .shop-items {
   width: 90vw;
@@ -1245,39 +1238,6 @@ header {
   }
 }
 
-/* back to top button 
-
-.top-link .fas{
-    font-size: 1.25rem;
-    position: fixed;
-    bottom: 3rem;
-    right: 3rem;
-   background: hsla(182, 63%, 54%);
-   width: 2rem;
-   height: 2rem;
-   display: grid;
-   place-items: center;
-   border-radius: 0.5rem;
-   color: #fff;
-   animation: bounce 2s ease-in-out infinite;
-   visibility: hidden;
-   z-index: -100;
-}
-.show-link{
-    visibility: visible;
-    z-index: 100;
-}
 
 
 
-@keyframes bounce {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.5);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }*/
