@@ -120,6 +120,7 @@ ul {
   width: 90vw;
   margin: 0 auto;
   max-width: 1170px;
+  position: relative;
 }
 @media screen and (min-width: 992px) {
   .section {
@@ -690,12 +691,14 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 5rem;
 }
 .about .contentBx {
   max-width: 100%;
   width: 100%;
   text-align: center;
   padding: 10px 60px;
+  margin-top: 15rem;
 }
 .titleText {
   font-weight: 600;
@@ -714,7 +717,7 @@ header {
   flex-wrap: wrap;
   width: 100%;
   text-align: left;
-  padding: 0 150px;
+  /*padding: 0 150px;*/
 }
 
 .about .imgBx {
@@ -1268,6 +1271,7 @@ header {
     max-width: 400px;
     width: 300px;
     text-align: center;
+    margin-top: 20rem;
   }
   .about .imgBx {
     min-height: 300px;
