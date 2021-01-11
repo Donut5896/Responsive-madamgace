@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap");
+
 /* global style */
 html {
   scroll-behavior: smooth;
@@ -114,6 +115,16 @@ ul {
 .cta-btn:focus {
   color: #fff;
   background-color: var(--secondary-font-color);
+}
+.section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .section {
+    width: 95vw;
+  }
 }
 /* footer */
 
@@ -714,7 +725,11 @@ header {
   max-width: var(--fixed-width);
   justify-content: center;
 }
-.about .imgBx .review {
+.review {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
   background: var(--clr-white);
   padding: 1.5rem 1rem;
   border-radius: var(--radius);
@@ -724,16 +739,40 @@ header {
   align-items: center;
   justify-content: center;
 }
+
+.review.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.review.next {
+  opacity: 1;
+  transform: translateX(100%);
+}
+.review.last {
+  opacity: 1;
+  transform: translateX(-100%);
+}
+
 .about .imgBx .review:hover {
   box-shadow: var(--dark-shadow);
 }
-.about .imgBx .img-container {
+.image-container {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   margin: 0 auto;
   margin-bottom: 1.5rem;
+}
+.img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 1px solid var(--clr-grey-7);
+  background: var(--clr-white);
+  padding: 0.25rem;
+  border-radius: 50%;
+  box-shadow: var(--dark-shadow);
 }
 #person-img {
   width: 100%;
@@ -743,76 +782,84 @@ header {
   border-radius: 50%;
   position: relative;
 }
-.imgBx .img-container::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f10e";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2.5rem;
-  height: 2.5rem;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  transform: translateY(25%);
-  background: var(--clr-primary-5);
-  color: var(--clr-white);
+.reviews-container {
+  display: flex;
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+  background: lightblue;
 }
-.imgBx .img-container::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: var(--clr-primary-5);
-  position: absolute;
-  top: -0.25rem;
-  right: -0.5rem;
-  border-radius: 50%;
-}
+
 #author {
   margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--clr-primary-5);
+  letter-spacing: var(--spacing);
+  margin: 0.5rem 0;
 }
 #job {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   color: var(--clr-primary-5);
   font-size: 0.85rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: 2px;
+  text-transform: capitalize;
 }
 #info {
-  margin-bottom: 0.75rem;
-  flex-wrap: wrap;
-  padding: 0 100px;
+  color: var(--clr-grey-5);
+  line-height: 1.8;
+  max-width: 90%;
+  margin: 0 auto;
+  letter-spacing: 1px;
 }
 
 .prev-btn,
 .next-btn {
   color: var(--clr-primary-7);
-  font-size: 4rem;
-  background: transparent;
-  border-color: transparent;
-  margin: 0 0.5rem;
+  font-size: 8rem;
   transition: var(--transition);
+}
+
+.button {
+  position: absolute;
+  width: 10%;
+  top: 175px;
+  padding: 0.25rem 0.35rem;
+  border-radius: 0.25rem;
+  border: transparent;
   cursor: pointer;
 }
 
+.next-btn {
+  right: -0.5rem;
+  margin-right: 20px;
+}
+.prev-btn {
+  left: -0.5rem;
+  margin-left: 20px;
+}
 .prev-btn:hover,
 .next-btn:hover {
   color: var(--clr-primary-5);
 }
-.random-btn {
-  margin-top: 0.5rem;
-  background: var(--clr-primary-10);
-  color: var(--clr-primary-5);
-  padding: 0.25rem 0.5rem;
-  text-transform: capitalize;
-  border-radius: var(--radius);
-  transition: var(--transition);
-  border-color: var(--clr-primary-5);
-  cursor: pointer;
+.fa-chevron-left,
+.fa-chevron-right {
+  font-size: 4.5rem;
 }
-.random-btn:hover {
-  background: var(--clr-primary-5);
-  color: var(--clr-primary-1);
+
+@media screen and (min-width: 768px) {
+  .next-btn {
+    right: 5rem;
+  }
+  .prev-btn {
+    left: 5rem;
+  }
+  .button {
+    font-size: 1.3rem;
+    padding: 0.35rem 0.5rem;
+  }
 }
 
 /* Best Seller section */
@@ -894,7 +941,6 @@ header {
   letter-spacing: 0.5rem;
 }
 
-
 .shop-items {
   width: 90vw;
   margin: 0 auto;
@@ -944,8 +990,13 @@ header {
   transition: var(--mainTransition);
 }
 .img-container img {
-  height: 300px;
-  width: 300px;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
 }
 .img-container:hover .shop-item-image {
   opacity: 0.5;
@@ -1237,7 +1288,3 @@ header {
     height: 320px;
   }
 }
-
-
-
-
