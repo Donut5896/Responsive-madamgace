@@ -5,7 +5,7 @@
             "fields": {
                 "title" : "สบู่ล้างหน้าสูตรสมุนไพร(คละ)",
                 "price" : 10.99,
-                "image" : { "fields" : {"file": {"url": "./products/1.jpg"}}}
+                "image" : { "fields" : {"file": {"url": "./Images/1.jpg"}}}
             }
         },
          {
@@ -13,7 +13,7 @@
             "fields": {
                 "title" : "Mega Whitening Mask",
                 "price" : 599.00,
-                "image" : { "fields" : {"file": {"url": "./products/2.jpg"}}}
+                "image" : { "fields" : {"file": {"url": "./Images/2.jpg"}}}
             }
         },
          {
@@ -21,7 +21,7 @@
             "fields": {
                 "title" : "Mega Whitening Lotion",
                 "price" : 399.00,
-                "image" : { "fields" : {"file": {"url": "./products/3.jpg"}}}
+                "image" : { "fields" : {"file": {"url": "./Images/3.jpg"}}}
             }
         },
          {
@@ -29,7 +29,7 @@
             "fields": {
                 "title" : "Whitening Abutin Serum",
                 "price" :  599.00,
-                "image" : { "fields" : {"file": {"url": "./products/4.jpg"}}}
+                "image" : { "fields" : {"file": {"url": "./Images/4.jpg"}}}
             }
         },
          {
@@ -37,7 +37,7 @@
             "fields": {
                 "title" : "สบู่ล้างหน้าสูตรกาแฟ",
                 "price" : 129.00,
-                "image" : { "fields" : {"file": {"url": "./products/5.jpg"}}}
+                "image" : { "fields" : {"file": {"url": "./Images/5.jpg"}}}
             }
         },
          {
@@ -45,7 +45,7 @@
             "fields": {
                 "title" : "สบู่ล้างหน้าสูตรน้ำผึ้งมะนาว",
                 "price" : 129.00,
-                "image" : { "fields" : {"file": {"url": "./products/6.jpg"}}}
+                "image" : { "fields" : {"file": {"url": "./Images/6.jpg"}}}
             }
         }
         
